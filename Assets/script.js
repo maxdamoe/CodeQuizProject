@@ -1,17 +1,24 @@
-var startbutton = document.querySelector("#start")
+var answerbutton = document.querySelector("#one")
+var answerbuttontwo = document.querySelector("#two")
+var answerbuttonthree = document.querySelector("#three")
+var answerbuttonfour = document.querySelector("#four")
 
-function startQuiz(startbutton){
-    var brown = document.getElementById("#div1");
 
-    if (brown.style.display === "none"){
-        brown.style.display = "block";
-    } else {
-        brown.style.display = "none":
-    }
-    // function to start the quiz on "start" button click
+
+
+function startQuiz(){
+    
+    
+
+   document.getElementById("empty").innerHTML = "Wrong!" 
 
 }
 
 
 //start button event listener
-startbutton.addEventListener("click", startQuiz)
+answerbutton.addEventListener("click", startQuiz)
+answerbuttontwo.addEventListener("click", startQuiz)
+answerbuttonthree.addEventListener("click", startQuiz)
+answerbuttonfour.addEventListener("click", startQuiz)
+
+//("<h1>href="./questionONE.html"</h1>")

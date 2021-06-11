@@ -1,0 +1,33 @@
+
+ /* game.html style */
+
+ *{
+    background-color:orange;
+    text-align:center;
+}
+
+.downflex {
+    flex-direction: column;
+    position: relative;
+    
+
+}
+
+ .option {
+    background-color:purple;
+    color: white;
+    width:300px;
+    height: 60px;
+    font-size: 20px;
+    vertical-align: middle;
+    position:relative;
+    margin-bottom:20px;
+    text-align: left;
+    
+
+}
+
+#empty {
+    font-size: 50px;
+    color:black
+}

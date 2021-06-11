@@ -1,0 +1,35 @@
+
+
+/* index.html style */
+
+
+*{
+    background-color:orange;
+    text-align:center;
+}
+
+#first h1 {
+    text-align: center;
+}
+
+#first p {
+    text-align: center;
+    top:100px;
+    
+}
+
+ #main {
+     text-align: center;
+     position:relative;
+     top:100px;
+
+ }
+
+ #start {
+     background-color:purple;
+     color: white;
+     width:100px;
+     height: 60px;
+     font-size: 20px;
+
+ }
