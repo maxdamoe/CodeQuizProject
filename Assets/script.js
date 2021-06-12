@@ -1,5 +1,6 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const containers = Array.from(document.getElementsByClassName('choice-container'))
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -10,35 +11,35 @@ let availableQuesions = [];
 let questions = [
     {
         question: 'Inside which HTML element do we put the JavaScript??',
-        choice1: '<script>',
-        choice2: '<javascript>',
-        choice3: '<js>',
-        choice4: '<scripting>',
+        choice1: 'A) <script>',
+        choice2: 'B) <javascript>',
+        choice3: 'C) <js>',
+        choice4: 'D) <scripting>',
         answer: 1,
     },
     {
         question:
             "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        choice1: "<script href='xxx.js'>",
-        choice2: "<script name='xxx.js'>",
-        choice3: "<script src='xxx.js'>",
-        choice4: "<script file='xxx.js'>",
+        choice1: "A) <script href='xxx.js'>",
+        choice2: "B) <script name='xxx.js'>",
+        choice3: "C) <script src='xxx.js'>",
+        choice4: "D) <script file='xxx.js'>",
         answer: 3,
     },
     {
         question: " How do you write 'Hello World' in an alert box?",
-        choice1: "msgBox('Hello World');",
-        choice2: "alertBox('Hello World');",
-        choice3: "msg('Hello World');",
-        choice4: "alert('Hello World');",
+        choice1: "A) msgBox('Hello World');",
+        choice2: "B) alertBox('Hello World');",
+        choice3: "C) msg('Hello World');",
+        choice4: "D) alert('Hello World');",
         answer: 4,
     },
     {
         question: " How do you write 'Hello World' in an alert box?",
-        choice1: "msgBox('Hello World');",
-        choice2: "alertBox('Hello World');",
-        choice3: "msg('Hello World');",
-        choice4: "alert('Hello World');",
+        choice1: "A) msgBox('Hello World');",
+        choice2: "B) alertBox('Hello World');",
+        choice3: "C) msg('Hello World');",
+        choice4: "D) alert('Hello World');",
         answer: 4,
     },
     {
@@ -81,7 +82,8 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
-choices.forEach((choice) => {
+containers.forEach((choice) => {
+
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
 
@@ -89,6 +91,7 @@ choices.forEach((choice) => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
         getNewQuestion();
+        
     });
 });
 

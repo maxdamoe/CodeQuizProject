@@ -4,4 +4,33 @@
  *{
     background-color:orange;
     text-align:center;
+    flex-direction: column;
+    flex:content;
+    position:relative;
+    
+    
+ }
+.container {
+text-align:center;
+display:flex;
+flex-direction: column;
+flex:center;
+position:relative;
+}
+ .choice-container {
+    background-color: purple;
+    width: 300px;
+    height: 100px;
+    left: 565px;
+    text-align: center;
+    position:relative;
+
+ }
+
+ .choice-text {
+    background-color: purple;
+    color: black;
+    position:relative;
+    top:35px;
+    font-size: large;
  }
