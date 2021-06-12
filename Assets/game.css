@@ -10,6 +10,7 @@
     
     
  }
+
 .container {
 text-align:center;
 display:flex;
@@ -17,6 +18,7 @@ flex-direction: column;
 flex:center;
 position:relative;
 }
+
  .choice-container {
     background-color: purple;
     width: 300px;
@@ -29,8 +31,17 @@ position:relative;
 
  .choice-text {
     background-color: purple;
-    color: black;
+    color: white;
     position:relative;
     top:35px;
     font-size: large;
+ }
+
+
+ #timerdisplay {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    background-color:red;
+    left:600px;
  }

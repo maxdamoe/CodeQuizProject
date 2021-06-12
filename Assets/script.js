@@ -10,45 +10,44 @@ let availableQuesions = [];
 
 let questions = [
     {
-        question: 'Inside which HTML element do we put the JavaScript??',
-        choice1: 'A) <script>',
-        choice2: 'B) <javascript>',
-        choice3: 'C) <js>',
-        choice4: 'D) <scripting>',
-        answer: 1,
-    },
-    {
-        question:
-            "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        choice1: "A) <script href='xxx.js'>",
-        choice2: "B) <script name='xxx.js'>",
-        choice3: "C) <script src='xxx.js'>",
-        choice4: "D) <script file='xxx.js'>",
+        question: 'Commonly used data types DO NOT include:',
+        choice1: 'A) strings',
+        choice2: 'B) booleans',
+        choice3: 'C) alerts',
+        choice4: 'D) numbers',
         answer: 3,
     },
     {
-        question: " How do you write 'Hello World' in an alert box?",
-        choice1: "A) msgBox('Hello World');",
-        choice2: "B) alertBox('Hello World');",
-        choice3: "C) msg('Hello World');",
-        choice4: "D) alert('Hello World');",
+        question: 'Arrays in Javascript can be used to store ____.',
+        choice1: 'A) numbers and strings',
+        choice2: 'B) booleans',
+        choice3: 'C) other arrays',
+        choice4: 'D) all of the above',
         answer: 4,
     },
     {
-        question: " How do you write 'Hello World' in an alert box?",
-        choice1: "A) msgBox('Hello World');",
-        choice2: "B) alertBox('Hello World');",
-        choice3: "C) msg('Hello World');",
-        choice4: "D) alert('Hello World');",
-        answer: 4,
+        question: 'The condition of an if / else statement is enclosed with:',
+        choice1: 'A) quotes',
+        choice2: 'B) curly brackets',
+        choice3: 'C) parenthesis',
+        choice4: 'D) square brackets',
+        answer: 3,
     },
     {
-        question: " How do you write 'Hello World' in an alert box?",
-        choice1: "msgBox('Hello World');",
-        choice2: "alertBox('Hello World');",
-        choice3: "msg('Hello World');",
-        choice4: "alert('Hello World');",
-        answer: 4,
+        question: 'String values must be enclosed within ___ when being assigned to a variable.',
+        choice1: 'A) commas',
+        choice2: 'B) curly brackets',
+        choice3: 'C) quotes',
+        choice4: 'D) parenthesis',
+        answer: 3,
+    },
+    {
+        question: 'A useful tool used during development and debugging is ____.',
+        choice1: 'A) Javscript',
+        choice2: 'B) terminal',
+        choice3: 'C) for loops',
+        choice4: 'D) console.log()',
+        answer: 3,
     },
 ];
 
@@ -61,6 +60,7 @@ startGame = () => {
     score = 0;
     availableQuesions = [...questions];
     getNewQuestion();
+    timer();
 };
 
 getNewQuestion = () => {
@@ -96,3 +96,15 @@ containers.forEach((choice) => {
 });
 
 startGame();
+
+
+function timer(){
+    var sec = 100;
+    var timer = setInterval(function(){
+        document.getElementById('timerdisplay').innerHTML='00:'+sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
