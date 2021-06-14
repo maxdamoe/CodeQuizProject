@@ -90,16 +90,20 @@ containers.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
+        
+        
+        reduce();
         getNewQuestion();
+        
         
     });
 });
 
-startGame();
 
+
+var sec = 100 
 
 function timer(){
-    var sec = 100;
     var timer = setInterval(function(){
         document.getElementById('timerdisplay').innerHTML='00:'+sec;
         sec--;
@@ -108,3 +112,22 @@ function timer(){
         }
     }, 1000);
 }
+
+
+// reduce the timer function
+ 
+
+function reduce(){
+ 
+    penalty = 1
+
+    if (penalty = 1) {
+
+        sec = sec - 10
+        timer();
+        
+    }
+
+}
+
+startGame();
