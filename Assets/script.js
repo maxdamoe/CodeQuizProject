@@ -15,7 +15,7 @@ let questions = [
         choice2: 'B) booleans',
         choice3: 'C) alerts',
         choice4: 'D) numbers',
-        answer: 3,
+        answer: '3'
     },
     {
         question: 'Arrays in Javascript can be used to store ____.',
@@ -23,7 +23,7 @@ let questions = [
         choice2: 'B) booleans',
         choice3: 'C) other arrays',
         choice4: 'D) all of the above',
-        answer: 4,
+        answer: '4',
     },
     {
         question: 'The condition of an if / else statement is enclosed with:',
@@ -31,23 +31,23 @@ let questions = [
         choice2: 'B) curly brackets',
         choice3: 'C) parenthesis',
         choice4: 'D) square brackets',
-        answer: 3,
+        answer: '3',
     },
     {
         question: 'String values must be enclosed within ___ when being assigned to a variable.',
-        choice1: 'A) commas',
+        choice1: 'A) quotes',
         choice2: 'B) curly brackets',
-        choice3: 'C) quotes',
+        choice3: 'C) commas',
         choice4: 'D) parenthesis',
-        answer: 3,
+        answer: '1',
     },
     {
         question: 'A useful tool used during development and debugging is ____.',
         choice1: 'A) Javscript',
-        choice2: 'B) terminal',
+        choice2: 'B) console.log()',
         choice3: 'C) for loops',
-        choice4: 'D) console.log()',
-        answer: 3,
+        choice4: 'D) terminal',
+        answer: '2',
     },
 ];
 
@@ -90,9 +90,14 @@ containers.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
+        console.log(selectedAnswer)
+        console.log(currentQuestion.answer)
+      
+            if (selectedAnswer !== currentQuestion.answer) {
+                reduce()
+            }
         
-        
-        reduce();
+        ;
         getNewQuestion();
         
         
