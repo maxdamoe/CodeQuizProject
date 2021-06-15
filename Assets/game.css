@@ -45,3 +45,30 @@ position:relative;
     background-color:red;
     left:600px;
  }
+
+ .empty {
+    background-color:white;
+    width: 400px;
+    height: 100px;
+    padding:1px;
+    position:relative;
+    left:500px;
+    top:70px;
+
+
+    
+
+ }
+
+
+ #nothing {
+
+   font-size: 40px;
+   color:black;
+   top:4px;
+   position:relative;
+   background-color:white;
+
+   
+   
+ }

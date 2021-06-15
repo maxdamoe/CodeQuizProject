@@ -2,6 +2,7 @@ const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const containers = Array.from(document.getElementsByClassName('choice-container'))
 
+
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -66,7 +67,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        return window.location.assign('/end.html');
+        return window.location.assign('./end.html');
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -92,25 +93,30 @@ containers.forEach((choice) => {
         const selectedAnswer = selectedChoice.dataset['number'];
         console.log(selectedAnswer)
         console.log(currentQuestion.answer)
-      
-            if (selectedAnswer !== currentQuestion.answer) {
-                reduce()
-            }
+
+        if (selectedAnswer !== currentQuestion.answer) {
+
+            document.getElementById("nothing").innerHTML = 'Wrong!!'
+            reduce()
+        } else {
+            document.getElementById("nothing").innerHTML = 'Correct!!'
+        }
+
         
-        ;
         getNewQuestion();
-        
-        
+
+
+
     });
 });
 
 
 
-var sec = 100 
+var sec = 100
 
-function timer(){
-    var timer = setInterval(function(){
-        document.getElementById('timerdisplay').innerHTML='00:'+sec;
+function timer() {
+    var timer = setInterval(function () {
+        document.getElementById('timerdisplay').innerHTML = '00:' + sec;
         sec--;
         if (sec < 0) {
             clearInterval(timer);
@@ -120,17 +126,19 @@ function timer(){
 
 
 // reduce the timer function
- 
 
-function reduce(){
- 
+
+function reduce() {
+
     penalty = 1
 
     if (penalty = 1) {
 
         sec = sec - 10
         timer();
+
         
+
     }
 
 }
