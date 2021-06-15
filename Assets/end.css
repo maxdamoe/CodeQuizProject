@@ -1,0 +1,23 @@
+/* game.html style */
+
+*{
+    background-color:orange;
+    text-align:center;
+    flex-direction: column;
+    flex:content;
+    position:relative;
+    
+    
+ }
+
+
+
+.scoring {
+    background-color: white;
+    width:500px;
+    height: 500px;
+    left:400px;
+
+}
+
+

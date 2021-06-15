@@ -55,19 +55,23 @@ let questions = [
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 5;
+var sec = 100;
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
-    getNewQuestion();
     timer();
+    getNewQuestion();
 };
 
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        return window.location.assign('./end.html');
+        
+        return window.location.assign('file:///C:/Users/maxsi/Desktop/Coding/CodeQuizProject/Assets/end.html');
+
+
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -98,6 +102,7 @@ containers.forEach((choice) => {
 
             document.getElementById("nothing").innerHTML = 'Wrong!!'
             reduce()
+
         } else {
             document.getElementById("nothing").innerHTML = 'Correct!!'
         }
@@ -112,7 +117,7 @@ containers.forEach((choice) => {
 
 
 
-var sec = 100
+
 
 function timer() {
     var timer = setInterval(function () {
@@ -136,11 +141,13 @@ function reduce() {
 
         sec = sec - 10
         timer();
+        console.log(sec) 
 
         
 
     }
 
 }
+
 
 startGame();
