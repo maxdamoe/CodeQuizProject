@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Quiz End</title>
     <link rel="stylesheet" href="./end.css">
 </head>
+
 <body>
     <div class=scoring>
         <h1>Your score is:</h1>
@@ -16,10 +18,16 @@
 
         </p>
     </div>
-    <div> 
+    <div>
         <h2>Enter Initials</h2>
-        <form contentEditable="true"></form>
+        <form contentEditable="true" id=formm>
+
+            <input type="text" name="username" id="username" placeholder="username" />
+            <button type="submit" id=saveScoreButton contenteditable="false">Save</button>
+            <button type="submit" id=seeScoreButton contenteditable="false">See Scores</button>
+        </form>
     </div>
     <script src="end.js"></script>
 </body>
+
 </html>

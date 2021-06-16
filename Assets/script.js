@@ -59,7 +59,6 @@ var sec = 100;
 
 startGame = () => {
     questionCounter = 0;
-    score = 0;
     availableQuesions = [...questions];
     timer();
     getNewQuestion();
@@ -68,7 +67,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        
+        localStorage.setItem('mostRecentScore', sec)
         return window.location.assign('file:///C:/Users/maxsi/Desktop/Coding/CodeQuizProject/Assets/end.html');
 
 
@@ -107,7 +106,7 @@ containers.forEach((choice) => {
             document.getElementById("nothing").innerHTML = 'Correct!!'
         }
 
-        
+
         getNewQuestion();
 
 
@@ -141,9 +140,9 @@ function reduce() {
 
         sec = sec - 10
         timer();
-        console.log(sec) 
+        console.log(sec)
 
-        
+
 
     }
 
