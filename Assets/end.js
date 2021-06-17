@@ -1,4 +1,4 @@
-const username = document.getElementById('username');
+
 const saveScoreButton = document.getElementById('saveScoreButton');
 const seeScoreButton = document.getElementById('seeScoreButton')
 const mostRecentScore = localStorage.getItem('mostRecentScore');
@@ -7,32 +7,40 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 score.innerText = mostRecentScore
 
-MaximumHighScores = 5
+const finalUsername = localStorage.getItem('savedUserName')
 
+const object = {
 
-username.addEventListener('keyup', () => {
-    localStorage.setItem('savedUserName', username.value)
-})
+    name: '',
+    score: '',
 
+}
 
 
 
 const saveScore = e => {
 
     e.preventDefault();
-    localStorage.setItem('savedScore', mostRecentScore)
-
-
+    object.score = mostRecentScore
 }
 
+const seeHighScores = e => {
 
-poop = localStorage.getItem('savedScore')
-pee = localStorage.getItem('savedUserName')
+    e.preventDefault();
 
+    object.name = (document.getElementById('username').value)
 
+    function ending() {
+
+        document.getElementById("testing").innerHTML = object.name + "  " + object.score
+
+    }
+
+    ending()
+}
 
 
 saveScoreButton.addEventListener('click', saveScore)
 
-seeScoreButton.addEventListener('click', console.log(poop))
+seeScoreButton.addEventListener('click', seeHighScores)
 

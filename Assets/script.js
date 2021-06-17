@@ -7,7 +7,7 @@ let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuesions = [];
+let availableQuestions = [];
 
 let questions = [
     {
@@ -59,13 +59,13 @@ var sec = 100;
 
 startGame = () => {
     questionCounter = 0;
-    availableQuesions = [...questions];
+    availableQuestions = [...questions];
     timer();
     getNewQuestion();
 };
 
 getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
         localStorage.setItem('mostRecentScore', sec)
         return window.location.assign('file:///C:/Users/maxsi/Desktop/Coding/CodeQuizProject/Assets/end.html');
@@ -73,8 +73,8 @@ getNewQuestion = () => {
 
     }
     questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-    currentQuestion = availableQuesions[questionIndex];
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
     choices.forEach((choice) => {
@@ -82,7 +82,7 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number];
     });
 
-    availableQuesions.splice(questionIndex, 1);
+    availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
 
