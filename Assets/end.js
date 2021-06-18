@@ -16,23 +16,35 @@ const object = {
 
 }
 
+poop = []
 
+poop.push(localStorage.getItem('storedScores'))
 
 const saveScore = e => {
 
     e.preventDefault();
     object.score = mostRecentScore
+    object.name = (document.getElementById('username').value)
+    const combination = object.name + "   " + object.score
+    localStorage.setItem('storedScores', combination)
 }
 
 const seeHighScores = e => {
 
     e.preventDefault();
 
-    object.name = (document.getElementById('username').value)
-
     function ending() {
 
-        document.getElementById("testing").innerHTML = object.name + "  " + object.score
+       
+
+        document.getElementById("testing").innerHTML = poop
+        console.log(poop)
+
+        
+
+        
+
+        
 
     }
 
