@@ -71,7 +71,7 @@ getNewQuestion = () => {
         return window.location.assign('./Assets/end.html');
 
 
-    }
+    } //
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
