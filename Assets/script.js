@@ -68,7 +68,7 @@ getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
         localStorage.setItem('mostRecentScore', sec)
-        return window.location.assign('https://www.w3schools.com/js/js_loop_for.asp');
+        return window.location.assign('./Assets/end.html');
 
 
     }
