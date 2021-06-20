@@ -68,10 +68,10 @@ getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
         localStorage.setItem('mostRecentScore', sec)
-        return window.location.assign('./Assets/end.html');
+        return window.location.assign('https://maxdamoe.github.io/CodeQuizProject/Assets/end.html');
 
 
-    } //
+    }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
