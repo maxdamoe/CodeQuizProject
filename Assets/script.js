@@ -68,7 +68,7 @@ getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
         localStorage.setItem('mostRecentScore', sec)
-        return window.location.assign('file:///C:/Users/maxsi/Desktop/Coding/CodeQuizProject/Assets/end.html');
+        return window.location.assign('https://github.com/maxdamoe/CodeQuizProject/blob/main/Assets/end.html');
 
 
     }
